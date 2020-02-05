@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calendar</title>
+        <link rel="stylesheet" href="css/calendarStyle.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/tag_today.js"></script> 
+        <script src="js/create_calendar.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var today = new Date(); //建立今天的日期物件。
+        </script>
+        <div id="Common_Era" style="background-image: url(pic/year.jpg)"><p>
+            <script>document.write(today.getFullYear());</script> 
+            <!--輸出西元年-->
+            </p></div>
+
+        <div id="mYear"><p>
+            <script>document.write((today.getMonth()+1)+"月");</script>
+            <!--輸出月份-->
+            </p></div>
+
+        <hr>
+
+        <div id = "calendar">
+            <script>
+                createCalendar('calendar'); // 創建一個日曆。
+                tagToday(today);  // 特別標示出今天。
+            </script>
+        </div>
+        <div id="msg" title="便條紙">
+            動態日曆需求✔<br>
+            點擊日期進入google搜尋✔<br>
+            移動至今天跳出便條紙✔<br>
+            點擊西元年即可變換風格✔
+        </div>
+        <video autoplay muted loop id="myVideo">
+            <source src="video/Dogs_Park.mp4" type="video/mp4">
+        </video>
+    </body>
+</html>
